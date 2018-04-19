@@ -1,0 +1,21 @@
+<%= form_for a_product do |f| %> 
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %> 
+	</p>
+
+	<p>
+		<%= f.label :description %><br>
+		<%= f.text_field :description %> 
+	</p>
+
+	<p>
+		<%= f.label :price_in_cents %><br>
+		<%= f.number_field :price_in_cents, :step => 0.001 %> 
+	</p>
+
+	
+	<p>
+		<%= f.submit "Save" %>
+	</p>
+<% end %> 
