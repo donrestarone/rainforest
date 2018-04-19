@@ -25,12 +25,15 @@ class ProductsController < ApplicationController
 	def new
 		@title = 'Create new Product'
 		@product = Product.new
+		#review instance is being made here
 	end 
 
-	#this is buggy
+	#this is buggy. possibly fixed
 	def show 
 		@product = Product.find(params[:id])
+		@product_reviews = @product.reviews
 		@title = @product.name
+		@review = Review.new
 	end 
 
 	def edit 
