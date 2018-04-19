@@ -1,0 +1,7 @@
+<title><%= @title %></title>
+<h1> Products </h1>
+<%= link_to("Add New Product", "products/new") %>
+
+<% @products.each do |product| %> 
+	<%= render 'single_product', a_product: product %>
+<% end %>
