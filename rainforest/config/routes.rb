@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root 'products#index'
 
   resources :customers, :except => [:destroy] 
-  resources :products 
-  resources :reviews
+  #nested routing where reviews is nested under products
+  resources :products do
+  	resources :reviews
+  end
+  
 end
