@@ -1,11 +1,11 @@
 class ProductsController < ApplicationController
-	
-	def index 
+
+	def index
 		@title = "All Products"
 		@products = Product.all
-	end 
+	end
 
-	def create 
+	def create
 		@title = 'Create New Product'
 
 		@product = Product.new
@@ -17,31 +17,31 @@ class ProductsController < ApplicationController
 			#redirect_to products_path
 			redirect_to product_path(@product)
 
-		else 
+		else
 			render :new
-		end 
+		end
 	end
 
 	def new
 		@title = 'Create new Product'
 		@product = Product.new
 		#review instance is being made here
-	end 
+	end
 
 	#this is buggy. possibly fixed
-	def show 
+	def show
 		@product = Product.find(params[:id])
 		@product_reviews = @product.reviews
 		@title = @product.name
 		@review = Review.new
-	end 
+	end
 
-	def edit 
+	def edit
 		id = params[:id]
 		@product = Product.find(id)
-	end 
-
-	def update 
+	end
+		puts ".............................#{@review.product_id}"
+	def update
 		@product = Product.find(params[:id])
 
 		@product.name = params[:product][:name]
@@ -50,15 +50,15 @@ class ProductsController < ApplicationController
 
 		if @product.save
 			redirect_to product_path
-		else 
+		else
 			render :index
 		end
-	end 
+	end
 
 	def destroy
 		@product = Product.find(params[:id])
 		@product.destroy
 		redirect_to products_path
-	end 
+	end
 
 end
