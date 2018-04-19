@@ -10,8 +10,9 @@ class ReviewsController < ApplicationController
 		 @review.customer_id = 1
 		if @review.save
 			redirect_to product_path(id: params[:product_id])
-		# else
-		#  redirect_to products_path
+		else
+			flash[:warning] = @review.errors.full_messages
+		 	redirect_to product_path(id: params[:product_id])
 		end
 	end
 
@@ -25,13 +26,14 @@ class ReviewsController < ApplicationController
 	def update
 		id = params[:product_id]
 		@review = Review.find(params[:id])
+		@product = Product.find(params[:product_id])
 
 		@review.review = params[:review][:review]
 		
 		if @review.save
 			redirect_to product_path(id: id)
 		else
-			render :index
+			render :edit
 		end
 	end
 
