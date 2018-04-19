@@ -792,3 +792,62 @@ ActionController::RoutingError (undefined method `product_id' for nil:NilClass):
   
 app/controllers/products_controller.rb:43:in `<class:ProductsController>'
 app/controllers/products_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 16:34:05 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (undefined method `product_id' for nil:NilClass):
+  
+app/controllers/products_controller.rb:43:in `<class:ProductsController>'
+app/controllers/products_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 16:34:12 -0400
+  
+ActionController::RoutingError (undefined method `product_id' for nil:NilClass):
+  
+app/controllers/products_controller.rb:43:in `<class:ProductsController>'
+app/controllers/products_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 16:34:12 -0400
+  
+ActionController::RoutingError (undefined method `product_id' for nil:NilClass):
+  
+app/controllers/products_controller.rb:43:in `<class:ProductsController>'
+app/controllers/products_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 16:34:34 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (undefined method `product_id' for nil:NilClass):
+  
+app/controllers/products_controller.rb:43:in `<class:ProductsController>'
+app/controllers/products_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 16:35:19 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (undefined method `product_id' for nil:NilClass):
+  
+app/controllers/products_controller.rb:43:in `<class:ProductsController>'
+app/controllers/products_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2018-04-19 16:35:22 -0400
+  
+ActionController::RoutingError (undefined method `product_id' for nil:NilClass):
+  
+app/controllers/products_controller.rb:43:in `<class:ProductsController>'
+app/controllers/products_controller.rb:1:in `<top (required)>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-04-19 16:35:58 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (undefined method `product_id' for nil:NilClass):
+  
+app/controllers/products_controller.rb:43:in `<class:ProductsController>'
+app/controllers/products_controller.rb:1:in `<top (required)>'
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-04-19 16:38:22 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/_single_product.html.erb (1.0ms)
+  Rendered products/_single_product.html.erb (0.3ms)
+  Rendered products/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 231ms (Views: 214.4ms | ActiveRecord: 0.9ms)
+
+

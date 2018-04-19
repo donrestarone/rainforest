@@ -40,7 +40,7 @@ class ProductsController < ApplicationController
 		id = params[:id]
 		@product = Product.find(id)
 	end
-		puts ".............................#{@review.product_id}"
+
 	def update
 		@product = Product.find(params[:id])
 
