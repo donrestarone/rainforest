@@ -10,15 +10,10 @@ class ReviewsController < ApplicationController
 		 @review.customer_id = 1
 		if @review.save
 			redirect_to product_path(id: params[:product_id])
-		else
-		 redirect_to products_path
+		# else
+		#  redirect_to products_path
 		end
 	end
-
-
-
-
-
 
 
 	def edit
@@ -26,6 +21,7 @@ class ReviewsController < ApplicationController
 		@review = Review.find(id)
 		@product = @review.product 
 	end 
+	
 	def update
 		id = params[:product_id]
 		@review = Review.find(params[:id])
